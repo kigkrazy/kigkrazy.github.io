@@ -230,8 +230,10 @@ social_icons:
   Weibo: weibo
 
 
+# 设置头像
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
+directory: /assets/images/KigKrazy.jpg
 #avatar:
 
 
