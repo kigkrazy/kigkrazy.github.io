@@ -140,9 +140,9 @@ launchable-activity: name=’com.estrongs.android.pop.view.FileExplorerActivity�
 
 ### 查看包的详细信息
 ```
-dumpsys package com.reizx.zues
+dumpsys package ${package name}
 ```
 包括安装的APK位置
 ```
-dumpsys package com.reizx.zues|grep .apk
+dumpsys package ${package name}|grep .apk
 ```
