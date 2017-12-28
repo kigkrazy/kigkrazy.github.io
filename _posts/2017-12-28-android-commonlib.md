@@ -30,6 +30,8 @@ compile group: 'commons-io', name: 'commons-io', version: '2.4'
 * 支持 View 中的 View 注入
 * 支持 View 事件回调函数注入
 
+#### []
+
 ### 开发常用资料查询
 
 [安卓开发规范](https://github.com/Blankj/AndroidStandardDevelop#5-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)  
