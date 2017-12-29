@@ -233,8 +233,7 @@ social_icons:
 # 设置头像
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-directory: /assets/images/KigKrazy.jpg
-#avatar:
+avatar: /assets/images/KigKrazy.jpg
 
 
 # Table Of Contents in the Sidebar
