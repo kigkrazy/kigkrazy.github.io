@@ -25,9 +25,8 @@ CREATE TABLE `my_order` (
 创建一张名为my_order的表。
 
 ### 自动生成表对应的实体和数据库操作DAO
+#### 手动配置mybatis-plus生成
 打开`guns-rest`模块下的单元测试中的一个类`com.stylefeng.guns.generator.EntityGenerator`
-#### 配置生成信息
-##### 手动配置生成
 ```
     public void entityGenerator() {
         AutoGenerator mpg = new AutoGenerator();
@@ -105,13 +104,221 @@ CREATE TABLE `my_order` (
 ```
 生成成功后，会自动弹出文件夹，此时将`TTT`文件夹删掉即可。
 
-##### 框架模块生成
-打开模块`guns-generator`中的`com.stylefeng.guns.generator.action.GunsCodeGenerator`。
 
-...此处防空，后面填坑。
+#### 封装调用
+1. 在模块`guns-generator`中的`com.stylefeng.guns.generator.action`建一个类`RzGunsMpGeneration`。  
+代码如下：
+```
+package com.stylefeng.guns.generator.action;
+
+import com.baomidou.mybatisplus.generator.AutoGenerator;
+import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
+import com.baomidou.mybatisplus.generator.config.GlobalConfig;
+import com.baomidou.mybatisplus.generator.config.PackageConfig;
+import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.rules.DbType;
+import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import com.stylefeng.guns.core.util.FileUtil;
+import sun.rmi.runtime.Log;
+
+import java.io.File;
+
+/**
+ * 符合模块二次开发的Mybatis-Plus的代码生成器封装
+ *
+ * 一般使用方法:
+ * RzGunsMpGeneration rzGunsMpGeneration = new RzGunsMpGeneration("reizx");
+ * rzGunsMpGeneration.setMpDataSource("127.0.0.1", 3306, "root", "123456", "guns");
+ * rzGunsMpGeneration.setMpStrategyConfig(new String[]{"Order"});
+ * rzGunsMpGeneration.execute();
+ */
+public class RzGunsMpGeneration {
+    private final String jdbcUrl =  "jdbc:mysql://${host}:${port}/${dbName}?characterEncoding=utf8";
+    AutoGenerator autoGenerator = new AutoGenerator();
+    GlobalConfig globalConfig = new GlobalConfig();
+    DataSourceConfig dataSourceConfig = new DataSourceConfig();
+    PackageConfig packageConfig = new PackageConfig();
+    StrategyConfig strategyConfig = new StrategyConfig();
+    String[] tables; //哪些表需要生成代码
+
+    public RzGunsMpGeneration(){
+        constructInit("reizx");
+    }
+
+    public RzGunsMpGeneration(String author){
+        constructInit(author);
+    }
+
+    /**
+     * 构造函数初始化
+     * @param author
+     */
+    public void constructInit(String author){
+        setMpGlobalConfig(author);
+        setMpPackageConfig();
+    }
+
+    /**
+     * 设置全局配置
+     * @param author 用户名
+     */
+    public void setMpGlobalConfig(String author){
+        String projectDir = System.getProperty("user.dir");
+        String srcDir = projectDir + "\\..\\guns-admin\\src\\main\\java";
+        globalConfig.setOutputDir(srcDir);//写自己项目的绝对路径,注意具体到java目录
+        globalConfig.setFileOverride(true);// 是否覆盖
+        globalConfig.setEnableCache(false);// XML 二级缓存
+        globalConfig.setBaseResultMap(true);// XML ResultMap
+        globalConfig.setBaseColumnList(true);// XML columList
+        globalConfig.setOpen(false);//是否打开输出目录
+        globalConfig.setAuthor(author);
+    }
+
+    /**
+     * 设置数据库源
+     * @param host 数据库IP
+     * @param port 数据库端口
+     * @param user 用户名
+     * @param password 密码
+     * @param dbName 数据库名称
+     * @return
+     */
+    RzGunsMpGeneration setMpDataSource(String host, int port,
+                                          String user, String password,
+                                          String dbName) {
+        String connectUrl = jdbcUrl.replace("${host}", host)
+                .replace("${port}", "" + port)
+                .replace("${dbName}", dbName);
+        dataSourceConfig.setDbType(DbType.MYSQL);
+        dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
+        dataSourceConfig.setUsername(user);
+        dataSourceConfig.setPassword(password);
+        dataSourceConfig.setUrl(connectUrl);
+        return this;
+    }
+
+    public RzGunsMpGeneration setMpStrategyConfig(String[] tables){
+        strategyConfig.setNaming(NamingStrategy.underline_to_camel);
+        strategyConfig.setInclude(tables);
+        return this;
+    }
+
+    /**
+     * 设置包信息，此处写死，需要扩展的话可以扩展
+     */
+    protected void setMpPackageConfig() {
+        packageConfig.setParent(null);
+        packageConfig.setEntity("com.stylefeng.guns.common.persistence.model");
+        packageConfig.setMapper("com.stylefeng.guns.common.persistence.dao");
+        packageConfig.setXml("com.stylefeng.guns.common.persistence.dao.mapping");
+        packageConfig.setService("TTT");       //本项目没用，生成之后删掉
+        packageConfig.setServiceImpl("TTT");   //本项目没用，生成之后删掉
+        packageConfig.setController("TTT");    //本项目没用，生成之后删掉
+    }
+
+    /**
+     * 生成代码
+     */
+    public void execute(){
+        if (strategyConfig.getInclude() == null || strategyConfig.getInclude().length == 0){
+            System.out.println("the strategyConfig->include is null, it won't generate code.");
+            return;
+        }
+        execute(strategyConfig.getInclude());
+    }
+
+    /**
+     * 生成代码
+     * @param tables 需要生成代码的表
+     */
+    public void execute(String[] tables){
+        if (tables == null || tables.length == 0){
+            System.out.println("the strategyConfig->include is null, it won't generate code.");
+            return;
+        }
+        strategyConfig.setInclude(tables);
+        autoGenerator.setGlobalConfig(globalConfig);
+        autoGenerator.setStrategy(strategyConfig);
+        autoGenerator.setDataSource(dataSourceConfig);
+        autoGenerator.setPackageInfo(packageConfig);
+        autoGenerator.execute();
+        String outputDir = globalConfig.getOutputDir() + "/TTT";
+        FileUtil.deleteDir(new File(outputDir));
+    }
+}
+
+```
+在新建一个执行类`RzGenerate`
+```
+package com.stylefeng.guns.generator.action;
+
+import com.stylefeng.guns.generator.engine.SimpleTemplateEngine;
+import com.stylefeng.guns.generator.engine.base.GunsTemplateEngine;
+import com.stylefeng.guns.generator.engine.config.ContextConfig;
+
+public class RzGenerate {
+    public static void main(String[] args) {
+        genAdiCode();
+    }
+
+    public static void genMpCode(){
+        RzGunsMpGeneration rzGunsMpGeneration = new RzGunsMpGeneration("reizx");
+        rzGunsMpGeneration.setMpDataSource("127.0.0.1", 3306, "root", "123456", "guns");
+        rzGunsMpGeneration.setMpStrategyConfig(new String[]{"my_order"});//此处一定要加否则不生成
+        rzGunsMpGeneration.execute();
+    }
+}
+
+```
+#### 执行效果
+1. 在`com.stylefeng.guns.common.persistence.dao`包下生成`MyOrderMapper.java`。
+2. 在`com.stylefeng.guns.common.persistence.dao.mapping`包下生成`MyOrderMapper.xml`。
+3. 在`com.stylefeng.guns.common.persistence.model`包下生成`MyOrder.java`。
+**一般我们推荐使用这种方法。**
 
 ### 生成基本的业务代码
+#### 生成方法
+在模块`guns-generator`中上一个步骤中生成的`com.stylefeng.guns.generator.action.RzGenerate`中添加`genAdiCode`函数。 整体代码如下： 
+```
+package com.stylefeng.guns.generator.action;
 
+import com.stylefeng.guns.generator.engine.SimpleTemplateEngine;
+import com.stylefeng.guns.generator.engine.base.GunsTemplateEngine;
+import com.stylefeng.guns.generator.engine.config.ContextConfig;
+
+public class RzGenerate {
+    public static void main(String[] args) {
+        genMpCode();//执行Mapper生成
+        genAdiCode();//执行业务框架代码生成
+    }
+
+    public static void genMpCode(){
+        RzGunsMpGeneration rzGunsMpGeneration = new RzGunsMpGeneration("reizx");
+        rzGunsMpGeneration.setMpDataSource("127.0.0.1", 3306, "root", "123456", "guns");
+        rzGunsMpGeneration.setMpStrategyConfig(new String[]{"my_order"});
+        rzGunsMpGeneration.execute();
+    }
+
+    public static  void genAdiCode(){
+        GunsTemplateEngine gunsTemplateEngine = new SimpleTemplateEngine();
+        ContextConfig contextConfig = new ContextConfig();
+        contextConfig.setBizChName("订单业务");
+        contextConfig.setBizEnName("Order");
+        contextConfig.setModuleName("Order");
+        gunsTemplateEngine.setContextConfig(contextConfig);
+        gunsTemplateEngine.start();//生成业务代码
+    }
+}
+```
+#### 执行效果
+1. 生成`com.stylefeng.guns.modular.Order.controller.OrderController`
+2. 生成`com.stylefeng.guns.common.persistence.model.Order`
+3. 生成`com.stylefeng.guns.modular.Order.service.IOrderService`
+4. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order.html`
+5. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order_add.html`
+6. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order.js`
+7. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order_info.js`
+8. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\java\Order.sql`
 
 ### 配置菜单和角色
 
