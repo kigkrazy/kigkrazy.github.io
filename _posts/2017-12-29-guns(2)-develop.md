@@ -109,7 +109,7 @@ CREATE TABLE `my_order` (
 
 #### 封装调用
 1. 在模块`guns-generator`中的`com.stylefeng.guns.generator.action`建一个类`RzGunsMpGeneration`。  
-代码如下：
+代码如下：  
 
 ```
 package com.stylefeng.guns.generator.action;
@@ -250,9 +250,7 @@ public class RzGunsMpGeneration {
     }
 }
 ```
-
 在新建一个执行类`RzGenerate`
-
 ```
 package com.stylefeng.guns.generator.action;
 
@@ -272,7 +270,6 @@ public class RzGenerate {
         rzGunsMpGeneration.execute();
     }
 }
-
 ```
 #### 执行效果
 1. 在`com.stylefeng.guns.common.persistence.dao`包下生成`MyOrderMapper.java`。
