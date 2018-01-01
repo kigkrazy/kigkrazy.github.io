@@ -311,17 +311,130 @@ public class RzGenerate {
 }
 ```
 #### 执行效果
-1. 生成`com.stylefeng.guns.modular.Order.controller.OrderController`
-2. 生成`com.stylefeng.guns.common.persistence.model.Order`
-3. 生成`com.stylefeng.guns.modular.Order.service.IOrderService`
-4. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order.html`
-5. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order_add.html`
-6. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order.js`
-7. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order_info.js`
-8. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\java\Order.sql`
+1. 生成`com.stylefeng.guns.modular.Order.controller.OrderController.java`
+2. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order.html`
+3. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order_add.html`
+4. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\WEB-INF\view\Order\Order\Order_edit.html`
+5. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\static\modular\Order\Order\Order.js`
+6. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\webapp\static\modular\Order\Order\Order_info.js`
+7. 生成`${工程目录}\guns-parent\..\guns-admin\src\main\java\Order.sql`
+
+#### bug以及说明
+生成业务代码的代码生成器有点BUG，需要对`OrderController.java`进行修改。修改后的文件如下：
+```
+package com.stylefeng.guns.modular.Order.controller;
+
+import com.stylefeng.guns.common.persistence.dao.MyOrderMapper;
+import com.stylefeng.guns.common.persistence.model.MyOrder;
+import com.stylefeng.guns.core.base.controller.BaseController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.stylefeng.guns.core.log.LogObjectHolder;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * 订单业务控制器
+ *
+ * @author fengshuonan
+ * @Date 2017-12-31 01:32:02
+ */
+@Controller
+@RequestMapping("/Order")
+public class OrderController extends BaseController {
+
+    private String PREFIX = "/Order/Order/";
+
+    @Autowired
+    private MyOrderMapper myOrderMapper;
+
+    /**
+     * 跳转到订单业务首页
+     */
+    @RequestMapping("")
+    public String index() {
+        return PREFIX + "Order.html";
+    }
+
+    /**
+     * 跳转到添加订单业务
+     */
+    @RequestMapping("/Order_add")
+    public String OrderAdd() {
+        return PREFIX + "Order_add.html";
+    }
+
+    /**
+     * 跳转到修改订单业务
+     */
+    @RequestMapping("/Order_update/{OrderId}")
+    public String OrderUpdate(@PathVariable Integer OrderId, Model model) {
+        MyOrder myOrder = myOrderMapper.selectById(OrderId);
+        model.addAttribute("item", myOrder);
+        LogObjectHolder.me().set(myOrder);
+        return PREFIX + "Order_edit.html";
+    }
+
+    /**
+     * 获取订单业务列表
+     */
+    @RequestMapping(value = "/list")
+    @ResponseBody
+    public Object list(String condition) {
+        return myOrderMapper.selectList(null);
+    }
+
+    /**
+     * 新增订单业务
+     */
+    @RequestMapping(value = "/add")
+    @ResponseBody
+    public Object add(MyOrder Order) {
+        myOrderMapper.insert(Order);
+        return super.SUCCESS_TIP;
+    }
+
+    /**
+     * 删除订单业务
+     */
+    @RequestMapping(value = "/delete")
+    @ResponseBody
+    public Object delete(@RequestParam Integer OrderId) {
+        myOrderMapper.deleteById(OrderId);
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 修改订单业务
+     */
+    @RequestMapping(value = "/update")
+    @ResponseBody
+    public Object update(MyOrder Order) {
+        myOrderMapper.updateById(Order);
+        return super.SUCCESS_TIP;
+    }
+
+    /**
+     * 订单业务详情
+     */
+    @RequestMapping(value = "/detail/{OrderId}")
+    @ResponseBody
+    public Object detail(@PathVariable("OrderId") Integer OrderId) {
+        return myOrderMapper.selectById(OrderId);
+    }
+}
+
+```
 
 ### 配置菜单和角色
-
+1. 登陆系统
+2. 点击系统管理->菜单管理->添加菜单。内容设置如下
+![菜单设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2017-12-29-guns(2)-develop-img(1).jpg)
+3. 系统管理->角色管理->(选择角色)->权限配置:
+![权限配置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2017-12-29-guns(2)-develop-img(1).jpg)
 ### 进一步开发业务
 
 
