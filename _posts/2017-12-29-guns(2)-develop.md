@@ -12,6 +12,7 @@ tags:
 
 ### 准备数据库表
 在SQL中执行语句：
+
 ```
 CREATE TABLE `my_order` (
 	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
@@ -27,6 +28,7 @@ CREATE TABLE `my_order` (
 ### 自动生成表对应的实体和数据库操作DAO
 #### 手动配置mybatis-plus生成
 打开`guns-rest`模块下的单元测试中的一个类`com.stylefeng.guns.generator.EntityGenerator`
+
 ```
     public void entityGenerator() {
         AutoGenerator mpg = new AutoGenerator();
@@ -108,6 +110,7 @@ CREATE TABLE `my_order` (
 #### 封装调用
 1. 在模块`guns-generator`中的`com.stylefeng.guns.generator.action`建一个类`RzGunsMpGeneration`。  
 代码如下：
+
 ```
 package com.stylefeng.guns.generator.action;
 
@@ -246,9 +249,10 @@ public class RzGunsMpGeneration {
         FileUtil.deleteDir(new File(outputDir));
     }
 }
-
 ```
+
 在新建一个执行类`RzGenerate`
+
 ```
 package com.stylefeng.guns.generator.action;
 
@@ -279,6 +283,7 @@ public class RzGenerate {
 ### 生成基本的业务代码
 #### 生成方法
 在模块`guns-generator`中上一个步骤中生成的`com.stylefeng.guns.generator.action.RzGenerate`中添加`genAdiCode`函数。 整体代码如下： 
+
 ```
 package com.stylefeng.guns.generator.action;
 
@@ -321,6 +326,7 @@ public class RzGenerate {
 
 #### bug以及说明
 生成业务代码的代码生成器有点BUG，需要对`OrderController.java`进行修改。修改后的文件如下：
+
 ```
 package com.stylefeng.guns.modular.Order.controller;
 
@@ -435,8 +441,27 @@ public class OrderController extends BaseController {
 ![菜单设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2017-12-29-guns(2)-develop-img(1).jpg)
 3. 系统管理->角色管理->(选择角色)->权限配置:
 ![权限配置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2017-12-29-guns(2)-develop-img(1).jpg)
+重新登陆即可看到
 
 ### 进一步开发业务
+#### 添加显示列
+在上面生成的`Order.js`文件中找到`初始化表格的列`的代码块，并添加部分代码：
+```
+/**
+ * 初始化表格的列
+ */
+Order.initColumn = function () {
+    return [
+        {field: 'selectItem', radio: true},
+        {title: '订单ID', field: 'id', visible: true, align: 'center', valign: 'middle'},
+        {title: '用户', field: 'user', visible: true, align: 'center', valign: 'middle'},
+        {title: '地点', field: 'place', visible: true, align: 'center', valign: 'middle'},
+        {title: '商品', field: 'goods', visible: true, align: 'center', valign: 'middle'},
+        {title: '下单时间', field: 'ordertime', visible: true, align: 'center', valign: 'middle'},
+    ];
+};
+```
+
 
 
 **注意:** 
