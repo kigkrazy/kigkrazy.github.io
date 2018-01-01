@@ -435,6 +435,7 @@ public class OrderController extends BaseController {
 ![菜单设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2017-12-29-guns(2)-develop-img(1).jpg)
 3. 系统管理->角色管理->(选择角色)->权限配置:
 ![权限配置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2017-12-29-guns(2)-develop-img(1).jpg)
+
 ### 进一步开发业务
 
 
