@@ -22,4 +22,5 @@ tags:
 [手把手教你使用 RxJava 2.0（三）](https://www.jianshu.com/p/1f4867ce3c01)
 
 =  
-[NotRxJava懒人专用指南](https://github.com/hehonghui/android-tech-frontier/blob/master/issue-9/NotRxJava%E6%87%92%E4%BA%BA%E4%B8%93%E7%94%A8%E6%8C%87%E5%8D%97.md)
+[NotRxJava懒人专用指南](https://github.com/hehonghui/android-tech-frontier/blob/master/issue-9/NotRxJava%E6%87%92%E4%BA%BA%E4%B8%93%E7%94%A8%E6%8C%87%E5%8D%97.md)  
+[Rxjava操作符之辩解map和flatmap的区别，以及应用场景](https://www.jianshu.com/p/c820afafd94b)
