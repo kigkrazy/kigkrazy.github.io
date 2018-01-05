@@ -25,8 +25,6 @@ tags:
 
 =  
 [NotRxJava懒人专用指南](https://github.com/hehonghui/android-tech-frontier/blob/master/issue-9/NotRxJava%E6%87%92%E4%BA%BA%E4%B8%93%E7%94%A8%E6%8C%87%E5%8D%97.md)  
-[Rxjava操作符之辩解map和flatmap的区别，以及应用场景](https://www.jianshu.com/p/c820afafd94b)
-
-=  
-
-[【Android】RxJava + Retrofit完成网络请求](https://www.jianshu.com/p/1fb294ec7e3b)
+[Rxjava操作符之辩解map和flatmap的区别，以及应用场景](https://www.jianshu.com/p/c820afafd94b)  
+[【Android】RxJava + Retrofit完成网络请求](https://www.jianshu.com/p/1fb294ec7e3b)  
+[RxJava 2.0 简单使用和分析](https://www.jianshu.com/p/0cd258eecf60)  
