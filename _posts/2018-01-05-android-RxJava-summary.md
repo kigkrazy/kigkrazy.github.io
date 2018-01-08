@@ -29,3 +29,5 @@ tags:
 [【Android】RxJava + Retrofit完成网络请求](https://www.jianshu.com/p/1fb294ec7e3b)  
 [这可能是最好的RxJava 2.x 教程（完结版）](https://www.jianshu.com/p/0cd258eecf60)  
 [谜之RxJava （三）update 2 —— subscribeOn 和 observeOn 的区别](https://segmentfault.com/a/1190000004856071)  
+=  
+[Rxjava2入门教程五：Flowable背压支持——几乎可以说是对Flowable最全面而详细的讲解](https://www.jianshu.com/p/ff8167c1d191)  
