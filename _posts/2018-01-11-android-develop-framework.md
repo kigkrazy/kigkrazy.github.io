@@ -24,7 +24,7 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 [MVP架构模式详解](https://www.jianshu.com/p/4b754ea48a40)  
 [Android架构（一）MVP架构在Android中的实践](http://blog.csdn.net/johnny901114/article/details/54783106)
 
-##### 分包方式
+#### 分包方式
 一般我会分为以下几个包：
 * app 存放本程序的Application
 * bean 存放实体类
@@ -37,7 +37,7 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 * service 服务类
 * broadcast 广播注册类
 
-##### 关于MVP架构的一些个人想法
+#### 关于MVP架构的一些个人想法
 MVP架构在小型项目中有时候会增加很多冗余代码。比如一个activity通常会带一个`VIEW`的接口类，这在我们日常的开发中有可能觉得是脱裤子放屁——多此一举。
 这点也是MVP架构最受争议的一点。关于这点个人有以下看法：
 1. 项目中应该尽量按照MVP架构进行开发，MVP主要功能是让代码层次更加清晰，添加不多的代码能够使层次更分明是值得付出的代价。
