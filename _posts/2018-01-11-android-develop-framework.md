@@ -55,6 +55,7 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 |常用工具类|[AndroidUtilCode][1002]|一个安卓常用工具类的大杂烩，大而全的工具类库。已经包含在`andrutil`的依赖中|
 |网络请求|RxJava+retrofit|一个强大的异步网络请求库|
 |数据存储|[greenDAO][1003]|轻量又实用的sqlite库，用于存放各种本地配置|
+|注入依赖|[ButterKnife][1007]|将Android视图和回调方法绑定到字段和方法上，利用annotation帮你快速完成View的初始化，减少代码|
 |反射类库|[joor][1004]|小巧又方便的JAVA反射调用类库|
 |BUG检测|[leakcanary][1006]|一款内存检测框架|
 |UI开发|[QMUI_Android][1005]|腾讯开源的一个UI库，就算不用也有很多在UI开发时候可以参考的点|
@@ -70,3 +71,4 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 [1004]: https://github.com/jOOQ/jOOR
 [1005]: https://github.com/QMUI/QMUI_Android
 [1006]: https://github.com/square/leakcanary
+[1007]: https://github.com/JakeWharton/butterknife
