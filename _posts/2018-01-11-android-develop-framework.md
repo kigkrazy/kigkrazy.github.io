@@ -59,6 +59,7 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 |反射类库|[joor][1004]|小巧又方便的JAVA反射调用类库|
 |BUG检测|[leakcanary][1006]|一款内存检测框架|
 |UI开发|[QMUI_Android][1005]|腾讯开源的一个UI库，就算不用也有很多在UI开发时候可以参考的点|
+|MVP辅助类库|[nucleus][1008]|Nucleus is an Android library, which utilizes the Model-View-Presenter pattern to properly connect background tasks with visual parts of an application.|
 
 以上常用工具类只需要引用`andrutil`就可全部依赖。
 
@@ -72,3 +73,4 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 [1005]: https://github.com/QMUI/QMUI_Android
 [1006]: https://github.com/square/leakcanary
 [1007]: https://github.com/JakeWharton/butterknife
+[1008]: https://github.com/konmik/nucleus
