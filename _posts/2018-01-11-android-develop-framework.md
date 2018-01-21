@@ -63,7 +63,9 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 以上常用工具类只需要引用`andrutil`就可全部依赖。
 
 ### 附加文章
-[Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)
+[Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)  
+[GeekNew<Material Design + MVP + RxJava2 + Retrofit + Dagger2 + Realm + Glide>](https://github.com/codeestX/GeekNews)
+
 
 [1001]: https://github.com/kigkrazy/andrutil
 [1002]: https://github.com/Blankj/AndroidUtilCode
