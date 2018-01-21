@@ -12,7 +12,7 @@ tags:
 阅读文章的时候请注意：**各种变量、包、类、资源的命名方式，团队成员的代码风格统一。**
 
 ### 代码架构方式
-代码架构方式通常按照`MVP`的方式架构。主要框架以及相关技术：`MVP + RxJava2 + Retrofit + Dagger2 + GreenDAO + Glide`
+代码架构方式通常按照`MVP`的方式架构。主要框架以及相关技术：`MVP + RxJava2 + Retrofit + Dagger2 + GreenDAO + Glide`（示例项目：[GeekNews](https://github.com/codeestX/GeekNews)）。
 #### MVP架构介绍
 MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、视图层、发布层，它是MVC架构的一种演变。作为一种新的模式，MVP与MVC有着一个重大的区别：在MVP中View并不直接使用Model，它们之间的通信是通过Presenter (MVC中的Controller)来进行的，所有的交互都发生在Presenter内部，而在MVC中View会直接从Model中读取数据而不是通过 Controller。
 * View: 对于View层也是视图层，在View层中只负责对数据的展示，提供友好的界面与用户进行交互。在Android开发中通常将Activity或者Fragment作为View层。
@@ -68,7 +68,7 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 
 ### 附加文章
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)  
-[GeekNew<Material Design + MVP + RxJava2 + Retrofit + Dagger2 + Realm + Glide>](https://github.com/codeestX/GeekNews)
+[GeekNews<Material Design + MVP + RxJava2 + Retrofit + Dagger2 + Realm + Glide>](https://github.com/codeestX/GeekNews)
 
 
 [1001]: https://github.com/kigkrazy/andrutil
