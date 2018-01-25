@@ -66,6 +66,11 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 
 以上常用工具类只需要引用`andrutil`就可全部依赖。
 
+### 打包
+这里推荐美团的[walle](https://github.com/Meituan-Dianping/walle)。  
+相关文章推荐:  
+[Android打包之多版本、多环境、多渠道](https://www.jianshu.com/p/872dc6f89cb4)
+
 ### 附加文章
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)  
 [GeekNews<Material Design + MVP + RxJava2 + Retrofit + Dagger2 + Realm + Glide>](https://github.com/codeestX/GeekNews)
