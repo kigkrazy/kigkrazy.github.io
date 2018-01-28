@@ -33,10 +33,17 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 * presenter 存放`MVP`架构中的`P`层类
 * view 存放activity以及Fragement
 * util 存放工具类
-* component 组建。一般存放一些主要的技术功能组件
+* component 组组件。一般存放一些主要的技术功能组件。
 * service 服务类
 * broadcast 广播注册类
-* di 依赖注入.一般用来存放Dagger2相关的注入类
+* contract 广播注册类
+* di 依赖注入。一般用来存放Dagger2相关的注入类。
+>通常`di`还会有一下分包：
+>* component 依赖注入组件Component,负责将对象注入到依赖需求方,它在实际编码中是一个接口,编译时Dagger2会自动为它生成一个实现类.
+>* module 依赖提供方Module,负责提供依赖中所需要的对象,实际编码中类似于工厂类
+>* qualifier 
+>* scope
+
 
 
 #### 关于MVP架构的一些个人想法
