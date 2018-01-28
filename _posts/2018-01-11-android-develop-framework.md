@@ -29,6 +29,7 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 * app 存放本程序的Application
 * bean 存放实体类
 * model 数据存取，以及网络交互相关的类
+* base 存放公共基础类
 * constant 存放常量，以及一些枚举类
 * presenter 存放`MVP`架构中的`P`层类
 * Contract 存放`MVP`架构中的`V`和`P`的接口类具体参考[GeekNews](https://github.com/codeestX/GeekNews)）中的Contract类方法。
