@@ -31,6 +31,7 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 * model 数据存取，以及网络交互相关的类
 * constant 存放常量，以及一些枚举类
 * presenter 存放`MVP`架构中的`P`层类
+* Contract 存放`MVP`架构中的`V`和`P`的接口类具体参考[GeekNews](https://github.com/codeestX/GeekNews)）中的Contract类方法。
 * view 存放activity以及Fragement
 * util 存放工具类
 * component 组组件。一般存放一些主要的技术功能组件。
@@ -72,6 +73,11 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 |MVP辅助类库|[nucleus][1008]|Nucleus is an Android library, which utilizes the Model-View-Presenter pattern to properly connect background tasks with visual parts of an application.|
 
 以上常用工具类只需要引用`andrutil`就可全部依赖。
+
+### 打包
+这里推荐美团的[walle](https://github.com/Meituan-Dianping/walle)。  
+相关文章推荐:  
+[Android打包之多版本、多环境、多渠道](https://www.jianshu.com/p/872dc6f89cb4)
 
 ### 附加文章
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)  
