@@ -36,7 +36,7 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 * component 组组件。一般存放一些主要的技术功能组件。
 * service 服务类
 * broadcast 广播注册类
-* contract 广播注册类
+* contract view与presenter的约定通信类（参考：[GeekNews](https://github.com/codeestX/GeekNews)）
 * di 依赖注入。一般用来存放Dagger2相关的注入类。
 >通常`di`还会有一下分包：
 >* component 依赖注入组件Component,负责将对象注入到依赖需求方,它在实际编码中是一个接口,编译时Dagger2会自动为它生成一个实现类.
