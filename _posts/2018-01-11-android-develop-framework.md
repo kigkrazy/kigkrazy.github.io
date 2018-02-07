@@ -81,8 +81,11 @@ MVP架构在小型项目中有时候会增加很多冗余代码。比如一个ac
 [Android打包之多版本、多环境、多渠道](https://www.jianshu.com/p/872dc6f89cb4)
 
 ### 附加文章
+[Dagger2 入门,以初学者角度.](https://www.jianshu.com/p/1d84ba23f4d2)  
+[Dagger2 最清晰的使用教程](https://www.jianshu.com/p/24af4c102f62)  
+[RxJava相关资料收集](https://kigkrazy.github.io/android/2018/01/05/android-RxJava-summary/)
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)  
-[GeekNews<Material Design + MVP + RxJava2 + Retrofit + Dagger2 + Realm + Glide>](https://github.com/codeestX/GeekNews)
+[GeekNews<Material Design + MVP + RxJava2 + Retrofit + Dagger2 + Realm + Glide>](https://github.com/codeestX/GeekNews)  
 
 
 [1001]: https://github.com/kigkrazy/andrutil
