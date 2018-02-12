@@ -21,10 +21,10 @@ tags:
 
 ## 软件架构相关
 ### APP架构设计经验谈
-[APP架构设计经验谈:接口的设计](https://keeganlee.me/post/architecture/20160107)
-[APP架构设计经验谈:技术选型](http://keeganlee.me/post/architecture/20160114)
-[APP架构设计经验谈:数据层的设计](http://keeganlee.me/post/architecture/20160120)
-[APP架构设计经验谈:业务层的设计](http://keeganlee.me/post/architecture/20160214)
+[APP架构设计经验谈:接口的设计](https://keeganlee.me/post/architecture/20160107)  
+[APP架构设计经验谈:技术选型](http://keeganlee.me/post/architecture/20160114)  
+[APP架构设计经验谈:数据层的设计](http://keeganlee.me/post/architecture/20160120)  
+[APP架构设计经验谈:业务层的设计](http://keeganlee.me/post/architecture/20160214)  
 [APP架构设计经验谈:展示层的设计](http://keeganlee.me/post/architecture/20160222)
 
 ### 未分类
