@@ -27,6 +27,9 @@ tags:
 [APP架构设计经验谈:业务层的设计](http://keeganlee.me/post/architecture/20160214)
 [APP架构设计经验谈:展示层的设计](http://keeganlee.me/post/architecture/20160222)
 
+### 未分类
+[如何给老婆解释什么是RESTful](https://zhuanlan.zhihu.com/p/30396391?group_id=937244108725641216)
+
 ## android资料
 
 ### RxJava相关资料
