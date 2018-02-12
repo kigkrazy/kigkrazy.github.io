@@ -19,12 +19,45 @@ tags:
 
 目前谷歌IP封杀厉害可能有点快死了。
 
+## 软件架构相关
+### APP架构设计经验谈
+[APP架构设计经验谈:接口的设计](https://keeganlee.me/post/architecture/20160107)
+[APP架构设计经验谈:技术选型](http://keeganlee.me/post/architecture/20160114)
+[APP架构设计经验谈:数据层的设计](http://keeganlee.me/post/architecture/20160120)
+[APP架构设计经验谈:业务层的设计](http://keeganlee.me/post/architecture/20160214)
+[APP架构设计经验谈:展示层的设计](http://keeganlee.me/post/architecture/20160222)
 
 ## android资料
 
+### RxJava相关资料
+### 资料汇总
+[RxJava 2.x 使用详解(一) 快速入门](https://maxwell-nc.github.io/android/rxjava2-1.html)  
+[RxJava 2.x 使用详解(二) 创建操作符](https://maxwell-nc.github.io/android/rxjava2-2.html)  
+[RxJava 2.x 使用详解(三) 过滤操作符](https://maxwell-nc.github.io/android/rxjava2-3.html)  
+[RxJava 2.x 使用详解(四) 合并聚合操作符](https://maxwell-nc.github.io/android/rxjava2-4.html)  
+[RxJava 2.x 使用详解(五) 条件操作符](https://maxwell-nc.github.io/android/rxjava2-5.html)  
+[RxJava 2.x 使用详解(六) 变换操作符](https://maxwell-nc.github.io/android/rxjava2-6.html)  
+
+---
+  
+[手把手教你使用 RxJava 2.0（一）](https://www.jianshu.com/p/d149043d103a)  
+[手把手教你使用 RxJava 2.0（二）](https://www.jianshu.com/p/310726a75045)  
+[手把手教你使用 RxJava 2.0（三）](https://www.jianshu.com/p/1f4867ce3c01)
+
+---  
+[NotRxJava懒人专用指南](https://github.com/hehonghui/android-tech-frontier/blob/master/issue-9/NotRxJava%E6%87%92%E4%BA%BA%E4%B8%93%E7%94%A8%E6%8C%87%E5%8D%97.md)  
+[Rxjava操作符之辩解map和flatmap的区别，以及应用场景](https://www.jianshu.com/p/c820afafd94b)  
+[【Android】RxJava + Retrofit完成网络请求](https://www.jianshu.com/p/1fb294ec7e3b)  
+[这可能是最好的RxJava 2.x 教程（完结版）](https://www.jianshu.com/p/0cd258eecf60)  
+[谜之RxJava （三）update 2 —— subscribeOn 和 observeOn 的区别](https://segmentfault.com/a/1190000004856071)  
+---
+[Rxjava2入门教程五：Flowable背压支持——几乎可以说是对Flowable最全面而详细的讲解](https://www.jianshu.com/p/ff8167c1d191)  
+
+### 未分类
 [那些年Android黑科技①:只要活着，就有希望](https://www.jianshu.com/p/cb2deed0f2d8?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation)  
 [RePlugin插件化的问题和解决办法](https://www.jianshu.com/p/17b4416a695e)   
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)
+
 
 ## 开源项目
 ### 跨平台
