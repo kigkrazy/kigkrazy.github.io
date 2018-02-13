@@ -27,13 +27,14 @@ tags:
 [APP架构设计经验谈:业务层的设计](http://keeganlee.me/post/architecture/20160214)  
 [APP架构设计经验谈:展示层的设计](http://keeganlee.me/post/architecture/20160222)
 
+
 ### RESTful
 [RESTful 架构风格概述](https://blog.igevin.info/posts/restful-architecture-in-general/#restful)
-[RESTful API 编写指南](https://blog.igevin.info/posts/restful-api-get-started-to-write/)
-
+[RESTful API 编写指南](https://blog.igevin.info/posts/restful-api-get-started-to-write/)  
+[如何给老婆解释什么是RESTful](https://zhuanlan.zhihu.com/p/30396391?group_id=937244108725641216)  
 
 ### 未分类
-[如何给老婆解释什么是RESTful](https://zhuanlan.zhihu.com/p/30396391?group_id=937244108725641216)
+[后端代码规范](https://www.jianshu.com/p/8f14b5cdde1f)  
 
 ## android资料
 
