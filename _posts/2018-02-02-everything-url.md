@@ -41,7 +41,7 @@ tags:
 [drizzleDumper的原理分析和使用说明](http://blog.csdn.net/qq1084283172/article/details/53561622)  
 [Android IDA So的动态调试大法](http://blog.csdn.net/feibabeibei_beibei/article/details/52740212)  
 [360一代加固脱壳方法总结](http://blog.csdn.net/feibabeibei_beibei/article/details/72773578)
-
+[Android逆向中So模块自动化修复工具+实战一发](https://bbs.pediy.com/thread-221741.htm)
 
 ### RxJava相关资料
 #### RxJava 2.x 使用详解
