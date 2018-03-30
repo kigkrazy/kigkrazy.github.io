@@ -26,7 +26,7 @@ ln -s  ~/bin/repo /bin/repo
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
 ```
 3. `repo`常用功能说明
-4. 
+4.
 * 如何切换分支？
 在工作目录再执行
 ```
@@ -63,7 +63,7 @@ repo sync
 
 ```
 # 安装openjdk8
-sudo add-apt-repository ppa:openjdk-r/ppa 
+sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install -y openjdk-7-jdk
 # 安装相关依赖
@@ -115,10 +115,9 @@ swapon /opt/swap
 make
 ```
 #### 刷入机器
-
-mkdir /usr/local/aosp
-cd /usr/local/aosp
-repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-5.1.1_r14
+```
+进入`out/pro`
+```
 ### 相关资料
 [谷歌说明](https://source.android.com/setup/initializing)  
 [清华-Android 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/)
