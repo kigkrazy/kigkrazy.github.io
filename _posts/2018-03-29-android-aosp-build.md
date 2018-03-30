@@ -78,9 +78,9 @@ sudo update-alternatives --config javah
 sudo update-alternatives --config javap
 sudo update-alternatives --config javadoc
 ```
-如果安装了多个orical-java环境，请先到/etc/profile.d/文件夹下把jdk.*相关文件删掉。
+如果安装了多个orical-java环境，请先到/etc/profile.d/文件夹下把jdk.\*相关文件删掉。
 
-#### 开始编译
+### 开始编译
 1. 初始化环境变量
 ```
 cd ${AOSP_DIR}
@@ -114,10 +114,18 @@ swapon /opt/swap
 ```
 make
 ```
-#### 刷入机器
+
+### 刷入机器
 ```
 进入`out/pro`
 ```
-### 相关资料
+
+### 中间遇到的相关问题
+* `repo sync`经常卡住不动？  
+这是由于BUG吧由于网络原因导致，请`ctrl + c`结束掉重新执行`repo sync`。
+
+
+
+### 参考资料
 [谷歌说明](https://source.android.com/setup/initializing)  
 [清华-Android 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/)
