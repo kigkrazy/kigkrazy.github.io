@@ -26,7 +26,7 @@ ln -s  ~/bin/repo /bin/repo
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
 ```
 3. `repo`常用功能说明
-4.
+
 * 如何切换分支？
 在工作目录再执行
 ```
