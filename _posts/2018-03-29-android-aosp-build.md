@@ -128,4 +128,5 @@ make
 
 ### 参考资料
 [谷歌说明](https://source.android.com/setup/initializing)  
+[编译要求](https://source.android.com/source/requirements)
 [清华-Android 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/)
