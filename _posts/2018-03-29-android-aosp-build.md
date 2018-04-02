@@ -100,8 +100,8 @@ lunch
 
 5. 设置swap交换分区(由于编译需要大量的交换分区，此处设置4096)
 ```
-# (count的值等于1024 x 你想要的文件大小, 4096000是4G，1024000是1G)
-dd if=/dev/zero of=/opt/swap bs=1024 count=4096000
+# (count的值等于1024 x 你想要的文件大小, 8192000是8G，1024000是1G)
+dd if=/dev/zero of=/opt/swap bs=1024 count=8192000
 # 创建swap文件
 mkswap /opt/swap
 swapon /opt/swap
