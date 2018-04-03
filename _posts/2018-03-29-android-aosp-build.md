@@ -8,8 +8,9 @@ tags:
 ---
 
 ### 环境说明
-系统：ubuntu 14.04 x64
+系统：ubuntu 14.04 x64  
 手机：谷歌N5
+
 ### 下载源码
 #### 配置`repo`工具环境
 1. 安装`repo`
@@ -21,36 +22,9 @@ chmod a+x ~/bin/repo
 ln -s  ~/bin/repo /bin/repo
 ```
 2. 设置镜像地址
-在~/.bashrc末尾添加
 ```
+#在~/.bashrc末尾添加
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
-```
-3. `repo`常用功能说明
-
-* 如何切换分支？
-在工作目录再执行
-```
-repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-5.1.1_r14
-repo sync
-```
-其中`-b`后面的参数为分支版本（[Android 版本列表](https://source.android.com/source/build-numbers#source-code-tags-and-builds)）。
-
-* 如何查看分支
-```
-cd .repo/manifests
-git branch
-```
-
-* 查看所有分支
-```
-cd .repo/manifests
-git branch -a
-```
-
-* 切换本地分支
-```
-repo init -b android-6.0.1_r63
-repo sync
 ```
 
 #### 下载源码
@@ -60,7 +34,6 @@ repo sync
 ```
 
 #### 安装依赖
-
 ```
 # 安装openjdk7
 sudo add-apt-repository ppa:openjdk-r/ppa
@@ -131,16 +104,23 @@ fastboot flash userdata userdata.img
 export AOSP_ROOT=/usr/local/aosp
 export PATH=$PATH:${AOSP_ROOT}/out/host/linux-x86/bin
 ```
-### 中间遇到的相关问题
+### 常见问题
+
+* 如何切换分支？
+在工作目录再执行
+```
+repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-5.1.1_r14
+repo sync
+```
+其中`-b`后面的参数为分支版本（[Android 版本列表](https://source.android.com/source/build-numbers#source-code-tags-and-builds)）。
+
 * `repo sync`经常卡住不动？  
 这是由于BUG吧由于网络原因导致，请`ctrl + c`结束掉重新执行`repo sync`。
 
 * 快速生成image
-
 ```
 # 生成system.img
 make snod
-
 # 生成boot.img
 make bootimage-nodeps
 ```
@@ -155,6 +135,24 @@ sudo update-alternatives --config javap
 sudo update-alternatives --config javadoc
 ```
 如果安装了多个orical-java环境，请先到/etc/profile.d/文件夹下把jdk.\*相关文件删掉。
+
+* 如何查看分支？
+```
+cd .repo/manifests
+git branch
+```
+
+* 查看所有分支？
+```
+cd .repo/manifests
+git branch -a
+```
+
+* 切换本地分支？
+```
+repo init -b android-6.0.1_r63
+repo sync
+```
 
 ### 参考资料
 [谷歌说明](https://source.android.com/setup/initializing)  
