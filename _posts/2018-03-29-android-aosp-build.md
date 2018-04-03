@@ -113,11 +113,10 @@ cd out/target/product/hammerhead
 # 2. 进行双清
 fastboot format cache
 fastboot format userdata
-# 刷入image
+# 刷入所有image
 fastboot -w flashall  
 ```
----
-`fastboot -w flashall `标示刷入所有image。也可以分别单个刷入image：
+`fastboot -w flashall `表示刷入所有image。也可以分别单个刷入image：
 ```
 fastboot flash recovery recovery.img
 fastboot flash  boot boot.img
@@ -137,6 +136,7 @@ export PATH=$PATH:${AOSP_ROOT}/out/host/linux-x86/bin
 这是由于BUG吧由于网络原因导致，请`ctrl + c`结束掉重新执行`repo sync`。
 
 * 快速生成image
+
 ```
 # 生成system.img
 make snod
