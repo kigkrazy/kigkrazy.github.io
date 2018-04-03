@@ -104,6 +104,17 @@ fastboot flash userdata userdata.img
 export AOSP_ROOT=/usr/local/aosp
 export PATH=$PATH:${AOSP_ROOT}/out/host/linux-x86/bin
 ```
+### 用`Android Sutdio`打开AOSP
+
+```
+cd development/tools/idegen/
+mm -B
+cd ../../../
+development/tools/idegen/idegen.sh
+```
+执行成功后就可以用`Android Sutdio`打开在`AOSP`根目录下的`android.ipr`文件。  
+**此处还有个细节：需要将项目依赖中原来的JAVA依赖删掉，否则将出现错误引用转跳。**
+
 ### 常见问题
 
 * 如何切换分支？
