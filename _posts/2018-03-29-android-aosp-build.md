@@ -62,23 +62,13 @@ repo sync
 #### 安装依赖
 
 ```
-# 安装openjdk8
+# 安装openjdk7
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install -y openjdk-7-jdk
 # 安装相关依赖
 sudo apt-get install -y git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
 ```
-
-* 有时候,我们需要编译不同版本的android系统,就可能使用不同的jdk版本.关于jdk版本切换,可以使用如下命令:
-```
-sudo update-alternatives --config java
-sudo update-alternatives --config javac
-sudo update-alternatives --config javah
-sudo update-alternatives --config javap
-sudo update-alternatives --config javadoc
-```
-如果安装了多个orical-java环境，请先到/etc/profile.d/文件夹下把jdk.\*相关文件删掉。
 
 ### 开始编译
 1. 初始化环境变量
@@ -116,15 +106,55 @@ make
 ```
 
 ### 刷入机器
+假设我们当前目录是AOSP，手机已经连上并且已经处于bootloader模式。可以按照下面的命令执行
 ```
-进入`out/pro`
+# 1. 进入out/target/product/hammerhead目录
+cd out/target/product/hammerhead
+# 2. 进行双清
+fastboot format cache
+fastboot format userdata
+# 刷入image
+fastboot -w flashall  
+```
+---
+`fastboot -w flashall `标示刷入所有image。也可以分别单个刷入image：
+```
+fastboot flash recovery recovery.img
+fastboot flash  boot boot.img
+fastboot flash cache.img
+fastboot flash system system.img
+fastboot flash userdata userdata.img
 ```
 
+### 配置一些环境变量方便开发
+在`~/.bashrc`的末尾添加
+```
+export AOSP_ROOT=/usr/local/aosp
+export PATH=$PATH:${AOSP_ROOT}/out/host/linux-x86/bin
+```
 ### 中间遇到的相关问题
 * `repo sync`经常卡住不动？  
 这是由于BUG吧由于网络原因导致，请`ctrl + c`结束掉重新执行`repo sync`。
 
+* 快速生成image
+```
+# 生成system.img
+make snod
 
+# 生成boot.img
+make bootimage-nodeps
+```
+此处只是根据`out`已经编译好的文件进行打包，并不进行编译。
+
+* 系统存在多个JAVA环境版本的时候jdk版本切换？
+```
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo update-alternatives --config javah
+sudo update-alternatives --config javap
+sudo update-alternatives --config javadoc
+```
+如果安装了多个orical-java环境，请先到/etc/profile.d/文件夹下把jdk.\*相关文件删掉。
 
 ### 参考资料
 [谷歌说明](https://source.android.com/setup/initializing)  
