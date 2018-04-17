@@ -31,11 +31,18 @@ typedef enum jobjectRefType {
 } jobjectRefType;*/
 //第二处修改 end
 ...
-//第三处修改（大约在1140行左右） start
+//第三处修改（大约在497行左右） start
+//注释掉jobjectRefType结构体
+//jobjectRefType (*GetObjectRefType)(JNIEnv*, jobject);
+//第三处修改end
+...
+//注释掉jobjectRefType结构体
+...
+//第四处修改（大约在1140行左右） start
 //将 #define JNIEXPORT  __attribute__ ((visibility ("default"))) 改为 #define JNIEXPORT
 //#define JNIEXPORT  __attribute__ ((visibility ("default")))
 #define JNIEXPORT
-//第三处修改 end
+//第四处修改 end
 ...
 ```
 
