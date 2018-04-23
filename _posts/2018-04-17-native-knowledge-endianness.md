@@ -34,3 +34,5 @@ tags:
 * x86、MOS Technology 6502、Z80、VAX、PDP-11等处理器为小端序
 * ARM、PowerPC（除PowerPC 970外）、DEC Alpha、SPARC V9、MIPS、PA-RISC及IA64的字节序是可配置的。
 * 网络传输一般采用大端序，也被称之为网络字节序，或网络序。
+
+### x86系统存储说明

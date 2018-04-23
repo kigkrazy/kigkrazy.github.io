@@ -17,3 +17,14 @@ tags:
 ```
 vmware-vdiskmanager.exe -k "xxx.vmdk"  
 ```
+
+
+## 添加docker权限给当前用户，使docker命令免sudo
+```
+#添加docker group
+sudo groupadd docker
+#将当前用户添加到docker组
+sudo gpasswd -a ${USER} docker
+#重启docker服务
+sudo service docker restart
+```
