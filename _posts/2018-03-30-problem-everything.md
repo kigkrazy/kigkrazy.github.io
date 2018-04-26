@@ -29,9 +29,15 @@ sudo gpasswd -a ${USER} docker
 sudo service docker restart
 ```
 
-## 重置桌面设置（不小心误操作了桌面，进行重置）
+## `linux mint`重置桌面设置（不小心误操作了桌面，进行重置）
 ```
 gsettings reset-recursively org.cinnamon # THIS IS FOR CINNAMON
 
 gsettings reset-recursively org.mate.panel # THIS IS FOR MATE
+```
+
+## windows重置网络
+命令行执行
+```
+netsh winsock reset
 ```
