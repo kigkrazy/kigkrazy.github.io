@@ -17,7 +17,11 @@ tags:
 ```
 vmware-vdiskmanager.exe -k "xxx.vmdk"  
 ```
-
+## `ubuntu`,`mint`下`sudo`免密码配置
+在`/etc/sudoers`的末尾添加如下配置：
+```
+${user_name} ALL=(ALL) NOPASSWD: ALL
+```
 
 ## 添加docker权限给当前用户，使docker命令免sudo
 ```
