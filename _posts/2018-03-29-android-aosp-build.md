@@ -89,7 +89,7 @@ fastboot format userdata
 # 刷入所有image
 env ANDROID_PRODUCT_OUT=`pwd` fastboot flashall -w
 ```
-`env ANDROID_PRODUCT_OUT=`pwd` fastboot flashall -w`表示刷入所有image。也可以分别单个刷入image：
+``env ANDROID_PRODUCT_OUT=`pwd` fastboot flashall -w``表示刷入所有image。也可以分别单个刷入image：
 ```
 fastboot flash recovery recovery.img
 fastboot flash  boot boot.img
