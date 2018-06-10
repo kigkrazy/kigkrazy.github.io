@@ -35,7 +35,7 @@ MVP是单词Model View Presenter的首字母的缩写，分别表示数据层、
 * contract 存放`MVP`架构中的`V`和`P`的接口类具体参考[GeekNews](https://github.com/codeestX/GeekNews)）中的Contract类方法。
 * view 存放activity以及Fragement
 * util 存放工具类
-* component 组组件。一般存放一些主要的技术功能组件。
+* component 组组件。一般存放一些主要的技术功能组件以及一些非通用的功能代码。
 * service 服务类
 * broadcast 广播注册类
 * contract view与presenter的约定通信类（参考：[GeekNews](https://github.com/codeestX/GeekNews)）
