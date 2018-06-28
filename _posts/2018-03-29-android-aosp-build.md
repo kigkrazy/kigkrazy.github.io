@@ -165,6 +165,14 @@ repo init -b android-6.0.1_r63
 repo sync
 ```
 
+### 关闭SELINUX
+编辑`device/lge/hammerhead/BoardConfig.mk `文件。`BOARD_KERNEL_CMDLINE`下面加上如下语句。
+
+```
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+```
+
+
 ### 参考资料
 [谷歌说明](https://source.android.com/setup/initializing)  
 [编译要求](https://source.android.com/source/requirements)  
