@@ -29,7 +29,7 @@ export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
 
 ### 下载`repo`描述仓库(此处我是这么叫的)
 ```
-repo init -u repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
+repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
 repo sync
 ```
 ### 修改repo描述符
