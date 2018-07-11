@@ -146,3 +146,15 @@ dumpsys package ${package name}
 ```
 dumpsys package ${package name}|grep .apk
 ```
+### 获取启动activity
+将下面内容复制到`sh`文件并赋予权限
+```
+#!/bin/bash
+#file getActivity.sh
+package_name=$1
+#launch app by package name
+adb shell monkey -p ${package_name} -c android.intent.category.LAUNCHER 1;
+sleep 1;
+#get Activity name
+adb shell logcat -d | grep 'START u0' | tail -n 1 | sed 's/.*cmp=\(.*\)} .*/\1/g'
+```
