@@ -64,6 +64,7 @@ tags:
 [这可能是最好的RxJava 2.x 教程（完结版）](https://www.jianshu.com/p/0cd258eecf60)  
 [谜之RxJava （三）update 2 —— subscribeOn 和 observeOn 的区别](https://segmentfault.com/a/1190000004856071)  
 [Rxjava2入门教程五：Flowable背压支持——几乎可以说是对Flowable最全面而详细的讲解](https://www.jianshu.com/p/ff8167c1d191)  
+[RxJava2 使用解析——常见的使用场景](https://www.jianshu.com/p/7474950af2df)
 
 ### 未分类
 [那些年Android黑科技①:只要活着，就有希望](https://www.jianshu.com/p/cb2deed0f2d8?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation)  
