@@ -78,6 +78,7 @@ brunch hammerhead
 最后我们获得一个zip包：`cm-12.1-20180701-UNOFFICIAL-hammerhead.zip`
 编译过程遇到问题请参考环境配置中提到的文章**安卓源码(aosp)下载编译**。
 # 刷入机器
+
 ### 安装`twrp`（一个recovery镜像）
 1. [下载](https://dl.twrp.me/hammerhead/)(此处我们下载`
 twrp-3.2.1-1-hammerhead.img`)
@@ -87,6 +88,7 @@ twrp-3.2.1-1-hammerhead.img`)
 fastboot flash recovery 
 twrp-3.2.1-1-hammerhead.img
 ```
+
 ### 刷写系统
 1. 刷写完`twrp`，直接进入`twrp`模式
 2. 点击`Advanced`->`ADB Sideload`，正确启动`adb sideload`连接
@@ -94,6 +96,19 @@ twrp-3.2.1-1-hammerhead.img
 ```
 adb sideload cm-12.1-20180701-UNOFFICIAL-hammerhead.zip
 ```
+
+### 排错
+#### bootloader版本匹配错误
+如果遇到bootloader相关的匹配版本错误请下载对应的`bootloader`刷入。刷入步骤如下：
+
+1. 进入`bootloader`模式
+2. 执行命令
+```
+fastboot flash bootloader bootloader-hammerhead-hhz12h.img
+```
+
+此处提供几个bootloader下载：  
+[bootloader-hammerhead-hhz12h.img](https://github.com/kigkrazy/reizx-repo/blob/master/others/bootloader-hammerhead-hhz12h.img?raw=true)
 
 # 参考文献
 [Build CyanogenMod 12 for Nexus 5](http://www.sunjw.us/blog/build-cyanogenmod-12-for-nexus-5/)  
