@@ -48,4 +48,4 @@ typedef enum jobjectRefType {
 
 3. 回到IDA中，在菜单中选择：`Options`->`Compilter..` ，在`Include directories`中填入`D:\cygwin64\usr\include;${IDA_INCLUDE}\linux;${IDA_INCLUDE}`。
 4. `File`->`Load file` -> `Parse C header file...`(或者`ctrl + F9`)，然后选择`${IDA_INCLUDE}`目录下的`jni.h`文件。
-5. `Edit`->`Add struct type...`(或者键盘`Ins`)->`Add standard structure`，选择`_JNIEnv`。
+5. 切换到`Structures`窗口(可以在菜单栏`Windows`找到)，`Edit`->`Add struct type...`(或者键盘`Ins`)->`Add standard structure`，选择`_JNIEnv`。
