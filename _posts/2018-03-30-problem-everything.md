@@ -45,3 +45,10 @@ gsettings reset-recursively org.mate.panel # THIS IS FOR MATE
 ```
 netsh winsock reset
 ```
+## 解除谷歌浏览器Chrome无法安装扩展插件的限制
+1. 将谷歌应用商店（Chrome Store）外的扩展插件安装程序，下载后，保存在本地硬盘上。将保存下来的*.crx文件或*.js文件直接拖拽到浏览器的“扩展程序”页面（即在谷歌浏览器地址栏输入：chrome://chrome/extensions/）。
+
+2. 在Chrome的桌面快捷方式上选择右键——属性, 在"目标" 后增加参数
+    ```
+    --enable-easy-off-store-extension-install
+    ```
