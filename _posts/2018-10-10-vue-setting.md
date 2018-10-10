@@ -1,20 +1,20 @@
 ---
 title: vscode下VUE开发环境配置
 categories:
- - linux
+  - linux
 tags:
- - linux
- - systemd
+  - linux
+  - systemd
 ---
 
 1. 安装插件
-   
-   * atom one dark
-   * vetur
-   * material icon
-   * prettier
-   * Subtle Match Brackets
-  
+
+   - atom one dark
+   - vetur
+   - material icon
+   - prettier
+   - Subtle Match Brackets
+
 2. 打开设置窗口
 
 
@@ -22,8 +22,8 @@ tags:
     * 在`扩展`栏中随便找一个插件设置，并且下啦找到`在setting.json中编辑`
     * 打开`setting.json`
 
-
 3. 往`setting.json`写入设置
+
 ```
     // 0- 使用说明:下载(修改setting.json1 为json) || 直接复制文本到setting.json
     // 0- 总原则:Less is More
@@ -32,7 +32,7 @@ tags:
     // 0- 界面原则:能不显示的就不显示(比如minimap,)需要显示的底部状态栏,顶部文件栏(仅此而已),半显示的(explorer(alt+.),menu(alt)),全屏不是很喜欢,影响其他功能
     // 1- 主题 Theme------------------------------------------ 需要安装atom one dark 和 material icon
     "workbench.colorTheme": "Atom One Dark", // atom 主题,字体配色好,比 Material配色舒服  sublime直接是 material
-    "workbench.iconTheme": "material-icon-theme", // icon主题 material 
+    "workbench.iconTheme": "material-icon-theme", // icon主题 material
     "material-icon-theme.folders.theme": "specific", // spaecific风格
     "material-icon-theme.activeIconPack": "angular_ngrx", //主题样式
     "material-icon-theme.hidesExplorerArrows": true, //隐藏图标箭头
@@ -67,7 +67,7 @@ tags:
     "editor.tabSize": 2, // 这里主要迎合eslint的规范,毕竟有好多插件只认editor,不认eslintrc等配置文件 比如js-html-  stylus格式化插件等等
     "editor.formatOnPaste": true, // 编辑粘贴自动格式化
     "editor.wordWrap": "on", // 自动换行
-    "files.exclude": { // 文件夹不显示 
+    "files.exclude": { // 文件夹不显示
         "**/node_modules": true
     },
     // 7- stylus 设置--------------------------------------------- 需要安装 stylusSupremacy插件
@@ -83,6 +83,7 @@ tags:
     //"namespaceResolver.showMessageOnStatusBar": true, //取消在页头提示
     // 10- vetur 配置 --------------------------------------------- 需要安装vetue 等
     "vetur.validation.template": false, // 取消Vetur默认使用 eslint-plugin-vue对template的检测
+    "vetur.format.defaultFormatter.js": "prettier", // vetur 使用 prettier格式化代码
     // 11- eslint 配置--------------------------------------------- // 需要安装eslint,并npm i eslint // 自动修复简单错误// 和格式化 在缩进上有一些重合
     "eslint.validate": [ // 支持eslint的文件 奇怪的是这里设置的autoFix居然不起作用
         "javascript",
@@ -98,6 +99,10 @@ tags:
     "prettier.semi": false, // 不加分号
     "prettier.singleQuote": true, // 单引号
     "editor.formatOnSave": true, // prettier用的是系统默认的保存格式化
+    "prettier.printWidth": 200, // 换行字符串阈值
+    "prettier.trailingComma": "none", // 最后一个对象元素加逗号
+    "prettier.arrowParens": "avoid", // (x) => {} 是否要有小括号
+    "prettier.proseWrap": "preserve", // 是否要换行
     // 13- 自动补全 suggest -------------------------------------------------------
     "editor.quickSuggestionsDelay": 400, //设置的延迟稍微高一些,400ms 连续输入之后在出现// 默认30ms,一个字母就要出现一下,神烦
     "html.suggest.html5": false, // 鼠标悬停在html标签上会提示,这个是啥,怎么用等等. 干掉,也是神烦,我会不知道标签? 小看我,哼!
