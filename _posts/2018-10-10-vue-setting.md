@@ -7,7 +7,14 @@ tags:
  - systemd
 ---
 
-1. 打开设置窗口
+1. 安装插件
+   
+   * atom one dark
+   * vetur
+   * material icon
+   * prettier
+   * Subtle Match Brackets
+2. 打开设置窗口
 
 
     * 从打开`文件`->`首选项`->`设置`
@@ -15,7 +22,7 @@ tags:
     * 打开`setting.json`
 
 
-2. 往`setting.json`写入设置
+3. 往`setting.json`写入设置
 ```
     // 0- 使用说明:下载(修改setting.json1 为json) || 直接复制文本到setting.json
     // 0- 总原则:Less is More
@@ -86,9 +93,9 @@ tags:
     ],
     "eslint.autoFixOnSave": true, // 保存时自动修复,格式化  和 editor formatonsave,略冲突
     // 12- prettier 配置 ----------------------------------------- 需要安装prettier  格式化
-    //"prettier.eslintIntegration": true, // prettier的eslint格式化从eslintrc.js中读取
-    //"prettier.semi": false, // 不加分号
-    //"prettier.singleQuote": true, // 单引号
+    "prettier.eslintIntegration": true, // prettier的eslint格式化从eslintrc.js中读取
+    "prettier.semi": false, // 不加分号
+    "prettier.singleQuote": true, // 单引号
     "editor.formatOnSave": true, // prettier用的是系统默认的保存格式化
     // 13- 自动补全 suggest -------------------------------------------------------
     "editor.quickSuggestionsDelay": 400, //设置的延迟稍微高一些,400ms 连续输入之后在出现// 默认30ms,一个字母就要出现一下,神烦
