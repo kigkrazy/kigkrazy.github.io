@@ -24,9 +24,9 @@ tags:
 ### 3. 运行`shadowsocks`并填写好配置
 
 - 3.1 设置如下  
-  ![设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts_imgs/2018-10-18-ss-Instructions-setting-2.jpg)
+  ![设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2018-10-18-ss-Instructions-setting-2.jpg)
 - 3.2 在托盘右键勾选启动  
-  ![设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts_imgs/2018-10-18-ss-Instructions-setting.png)
+  ![设置](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2018-10-18-ss-Instructions-setting.png)
 
 - 3.3 注意：
 
@@ -38,16 +38,16 @@ tags:
 
 ### 1. 进入[谷歌商店](https://chrome.google.com/webstore/category/extensions)安装 SwitchyOmega 插件
 
-### 2. 导入配置文件（[点此下载](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts_file/OmegaOptions.bak?raw=true)）
+### 2. 导入配置文件（[点此下载](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_file/OmegaOptions.bak?raw=true)）
 
-![SwitchyOmega](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega-import-2.jpg)
+![SwitchyOmega](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega-import-2.jpg)
 
     可能无法直接下载配置文件，请任意一个地方新建一个文件OmegaOptions.bak，点击上面连接转跳过去，然后将网站显示的内容全部复制保存到OmegaOptions.bak，在进行导入。
 
 ### 3. 切换到指定选项
 
-![SwitchyOmega](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega.jpg)
+![SwitchyOmega](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega.jpg)
 
 ### 4. 如果需要特定网站走特定代理也可以在右上角插件手动选择
 
-![SwitchyOmega](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega-2.jpg)
+![SwitchyOmega](https://raw.githubusercontent.com/kigkrazy/kigkrazy.github.io/master/_posts/_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega-2.jpg)
