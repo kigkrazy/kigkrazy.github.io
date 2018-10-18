@@ -9,7 +9,7 @@ tags:
 ## 一、环境
 
 - [chrome](https://www.google.cn/intl/zh-CN/chrome/)
-- [shadowsocks](_posts_file/Shadowsocks-2.5.6.rar?raw=true)
+- [shadowsocks](https://github.com/kigkrazy/kigkrazy.github.io/raw/master/_posts/_posts_file/Shadowsocks-2.5.6.rar)
 
 ## 二、配置 shadowsocks
 
