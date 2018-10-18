@@ -40,6 +40,10 @@ tags:
 
 ### 2. 导入配置文件（[点此下载](_posts_file/OmegaOptions.bak?raw=true)）
 
+![SwitchyOmega](_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega-import-2.jpg)
+
+    可能无法直接下载配置文件，请任意一个地方新建一个文件OmegaOptions.bak，点击上面连接转跳过去，然后将网站显示的内容全部复制保存到OmegaOptions.bak，在进行导入。
+
 ### 3. 切换到指定选项
 
 ![SwitchyOmega](_posts_imgs/2018-10-18-ss-Instructions-SwitchyOmega.jpg)
