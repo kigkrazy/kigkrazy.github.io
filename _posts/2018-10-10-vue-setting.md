@@ -38,7 +38,7 @@ tags:
     "material-icon-theme.hidesExplorerArrows": true, //隐藏图标箭头
     // 2- 字体 Font---------------------------------------------
     // 关于注释为什么是斜体,也是非常纠结啊,中文斜体不好看,英文斜体很漂亮,真是鱼与熊掌
-    "editor.fontFamily": "Consolas,'Microsoft yahei", // 英文:consolas 中文:雅黑
+    //"editor.fontFamily": "Consolas,'Microsoft yahei", // 英文:consolas 中文:雅黑
     // "editor.fontSize": 20, // 字号
     // "editor.lineHeight": 40, // 行高
     // 3- 显示 view-----------------------------------------------
@@ -112,7 +112,7 @@ tags:
     "editor.wordBasedSuggestions": false, //单词提示 bye-bye
     // 14- 烦人的括号匹配matchBrackets ----------------------------------------------- 需要安装Subtle Match Brackets
     "editor.matchBrackets": false, // 干掉原先的丑陋的恼人的匹配
-    "subtleBrackets.styles": { // 换上我们漂亮的小金条
+    "subtleBrackets.style": { // 换上我们漂亮的小金条
         "global": {
             "borderColor": "GoldenRod",
             "borderWidth": "4px"
