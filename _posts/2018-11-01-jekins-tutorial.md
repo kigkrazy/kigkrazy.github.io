@@ -14,6 +14,15 @@ tags:
 - maven
 - npm
 
+安装环境
+
+```
+yum install -y git
+yum install -y maven
+yum install -y npm
+yum install -y gradle
+```
+
 ## 安装`jdk`
 
 ```
@@ -77,3 +86,21 @@ sudo chkconfig jenkins on # 设置开机启动
 #### 日志文件过大
 
 安装插件: `Logfilesizechecker`和`Build-timeout`
+
+#### 忘记密码
+
+编辑`{$JENKINS_HOME}/users/admin/config.xml`，找到如下内容
+
+```
+<hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>#jbcrypt:$xxxxxxxxxx</passwordHash>
+</hudson.security.HudsonPrivateSecurityRealm_-Details>
+```
+
+将`passwordHash`标签中的内容换为
+
+```
+#jbcrypt:$2a$10$DdaWzN64JgUtLdvxWIflcuQu2fgrrMSAMabF5TSrGK5nXitqK9ZMS
+```
+
+这时候密码就变为`111111`。用账户名`admin`，和密码`111111`登陆后修改密码即可。
