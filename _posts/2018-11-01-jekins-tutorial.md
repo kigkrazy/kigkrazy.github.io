@@ -14,19 +14,20 @@ tags:
 - maven
 - npm
 
-安装环境
+安装环境依赖
 
 ```
 yum install -y git
 yum install -y maven
 yum install -y npm
 yum install -y gradle
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
 ```
 
 ## 安装`jdk`
 
 ```
-yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
 ```
 
 获取`JAVA_HOME`路径
