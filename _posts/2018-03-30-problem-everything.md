@@ -76,3 +76,26 @@ Error obtaining UI hierarchy Error while obtaining UI hierarchy XML file: com.an
 ```
 adb root
 ```
+
+## 解决 npm 编译错误
+
+```
+ERROR in Missing binding /home/linux-haow/文档/seeker/client/node_modules/node-sass/vendor/linux-x64-48/binding.node
+[1] Node Sass could not find a binding for your current environment: Linux 64-bit with Node.js 6.x
+[1][1] Found bindings for the following environments:
+[1]   - Linux 64-bit with Node.js 4.x
+[1][1] This usually happens because your environment has changed since running `npm install`.
+[1] Run `npm rebuild node-sass` to build the binding for your current environment.
+```
+
+解决方案：
+
+```
+# At first going into project folder. Then write bellow code
+
+npm rebuild node-sass
+```
+
+```
+
+```
