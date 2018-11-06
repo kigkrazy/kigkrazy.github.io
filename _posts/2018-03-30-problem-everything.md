@@ -95,7 +95,3 @@ ERROR in Missing binding /home/linux-haow/文档/seeker/client/node_modules/node
 
 npm rebuild node-sass
 ```
-
-```
-
-```
