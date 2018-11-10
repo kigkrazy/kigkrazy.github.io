@@ -65,27 +65,33 @@ netsh winsock reset
    --enable-easy-off-store-extension-install
    ```
 
+## UIAUTOMATOR 无法获取节点树
+
+```
+Error obtaining UI hierarchy Error while obtaining UI hierarchy XML file: com.android.ddmlib.SyncExc
+```
+
+解决方法：
+
+```
+adb root
+```
+
 ## 解决 npm 编译错误
 
 ```
 ERROR in Missing binding /home/linux-haow/文档/seeker/client/node_modules/node-sass/vendor/linux-x64-48/binding.node
 [1] Node Sass could not find a binding for your current environment: Linux 64-bit with Node.js 6.x
-[1]
-[1] Found bindings for the following environments:
+[1][1] Found bindings for the following environments:
 [1]   - Linux 64-bit with Node.js 4.x
-[1]
-[1] This usually happens because your environment has changed since running `npm install`.
+[1][1] This usually happens because your environment has changed since running `npm install`.
 [1] Run `npm rebuild node-sass` to build the binding for your current environment.
----------------------
-作者：csdn_haow
-来源：CSDN
-原文：https://blog.csdn.net/csdn_haow/article/details/53501988
-版权声明：本文为博主原创文章，转载请附上博文链接！
 ```
 
 解决方案：
 
 ```
 # At first going into project folder. Then write bellow code
+
 npm rebuild node-sass
 ```

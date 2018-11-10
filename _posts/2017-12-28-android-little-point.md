@@ -97,13 +97,13 @@ invoke-static {}, Landroid/os/Debug;->waitForDebugger()V
 
 ### Android ndk的ABI条件编译
 
-| 宏 | abi | 说明 |
-|:---:|:---:|:---:|
-|__arm__|armeabi|会支持包集arm指令集|
-|__arm__|armeabi-v7|会支持包集armeabi-v7指令集|
-|__aarch64__|arm64-v8a|会支持包集armeabi-v8a指令集|
-|__i386__|x86|会支持包集x86指令集|
-|__x86_64__|x86_64|会支持包集x64指令集|
+| 宏          | abi        | 说明                        |
+| :---------: | :--------: | :-------------------------: |
+| __arm__     | armeabi    | 会支持包集arm指令集         |
+| __arm__     | armeabi-v7 | 会支持包集armeabi-v7指令集  |
+| __aarch64__ | arm64-v8a  | 会支持包集armeabi-v8a指令集 |
+| __i386__    | x86        | 会支持包集x86指令集         |
+| __x86_64__  | x86_64     | 会支持包集x64指令集         |
 
 用法：
 ```
@@ -162,4 +162,9 @@ adb shell logcat -d | grep 'START u0' | tail -n 1 | sed 's/.*cmp=\(.*\)} .*/\1/g
 ### 命令行发送广播
 ```
 am broadcast -a ${ACTION}
+```
+
+### 判断输入法弹窗
+```
+adb shell dumpsys input_method |grep mInputShown=true
 ```
