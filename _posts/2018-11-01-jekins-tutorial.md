@@ -109,3 +109,8 @@ sudo chkconfig jenkins on # 设置开机启动
 #### 首次登陆空白页
 
 重启再重新登陆。
+
+### 插件推荐
+
+- Multijob plugin: 任务合并插件
+- git： git 仓库拉取插件
