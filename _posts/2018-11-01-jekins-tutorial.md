@@ -18,10 +18,9 @@ tags:
 
 ```
 yum install -y git
-yum install -y maven
 yum install -y npm
-yum install -y gradle
-yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+yum install -y maven
+yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
 ```
 
 ## 安装`jdk`
