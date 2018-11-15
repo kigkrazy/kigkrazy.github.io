@@ -54,7 +54,7 @@ export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
 ```
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
-sudo yum install jenkins
+sudo yum install -y jenkins
 ```
 
 #### 安装稳定版版`jenkins`
@@ -62,7 +62,7 @@ sudo yum install jenkins
 ```
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
 sudo rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
-sudo yum install jenkins
+sudo yum install -y jenkins
 ```
 
 ### 修改`jekins`配置
