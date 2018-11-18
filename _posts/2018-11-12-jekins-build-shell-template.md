@@ -12,7 +12,7 @@ tags:
 # 本脚本仅适用于CentOS
 WORK_DIR=`pwd` #工作目录
 echo 'install all dependences'
-yum install -y epel git java-1.8.0-openjdk java-1.8.0-openjdk-devel vim wget curl unzip
+yum install -y epel git java-1.8.0-openjdk java-1.8.0-openjdk-devel vim wget curl unzip maven
 
 echo 'install gradle'
 cd /usr/local/
