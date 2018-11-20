@@ -113,3 +113,4 @@ sudo chkconfig jenkins on # 设置开机启动
 
 - Multijob plugin: 任务合并插件
 - git： git 仓库拉取插件
+- jenkins-multijob-plugin: 这个插件主要作用就是把多个 jobs 组装起来，形成持续集成。
