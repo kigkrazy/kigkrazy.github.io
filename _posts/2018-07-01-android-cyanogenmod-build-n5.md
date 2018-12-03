@@ -115,7 +115,7 @@ fastboot flash recovery twrp-3.2.1-1-hammerhead.img
 
 1. 刷写完`twrp`，直接进入`twrp`模式
 2. 进行双清`Wipe`->`Advanced Wipe`->`${全部打勾}`->`Swipe to Wipe`
-3. 点击`Advanced`->`ADB Sideload`，正确启动`adb sideload`连接
+3. 返回`trwp`最开始界面，点击`Advanced`->`ADB Sideload`，正确启动`adb sideload`连接
 4. 执行安装(假设此时已经在`cm-12.1-20180701-UNOFFICIAL-hammerhead.zip`的目录下)
 
 ```
