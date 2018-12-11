@@ -84,6 +84,12 @@ tags:
     // 10- vetur 配置 --------------------------------------------- 需要安装vetue 等
     "vetur.validation.template": false, // 取消Vetur默认使用 eslint-plugin-vue对template的检测
     "vetur.format.defaultFormatter.js": "prettier", // vetur 使用 prettier格式化代码
+    "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.defaultFormatterOptions": {
+        "prettyhtml": {
+        "printWidth": 200
+        }
+    },
     // 11- eslint 配置--------------------------------------------- // 需要安装eslint,并npm i eslint // 自动修复简单错误// 和格式化 在缩进上有一些重合
     "eslint.validate": [ // 支持eslint的文件 奇怪的是这里设置的autoFix居然不起作用
         "javascript",
