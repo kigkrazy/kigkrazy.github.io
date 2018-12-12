@@ -7,22 +7,25 @@ tags:
   - systemd
 ---
 
-1. 安装插件
+1. 安装VSCODE插件
 
    - atom one dark
-   - vetur
    - material icon
-   - prettier
-   - Subtle Match Brackets
+   - Vue Development Extension Pack (这是一个VUE开发环境的包)
 
-2. 打开设置窗口
+2. 安装`npm`插件
+  ```
+  npm install -g eslint-config-with-prettie
+  ```
+
+3. 打开设置窗口
 
 
     * 从打开`文件`->`首选项`->`设置`
     * 在`扩展`栏中随便找一个插件设置，并且下啦找到`在setting.json中编辑`
     * 打开`setting.json`
 
-3. 往`setting.json`写入设置
+4. 往`setting.json`写入设置
 
 ```
 {
@@ -61,27 +64,8 @@ tags:
   //     "borderWidth": "4px"
   //   }
   // },
-
-  // 强制单引号
-  "prettier.singleQuote": true,
-  // 尽可能控制尾随逗号的打印
-  "prettier.trailingComma": "all",
-  // 开启 eslint 支持
-  "prettier.eslintIntegration": true,
-  "prettier.printWidth": 200, // 换行字符串阈值
-  // 保存时自动fix
-  "eslint.autoFixOnSave": true,
-  // 添加 vue 支持
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    }
-  ],
   // 使用插件格式化 html
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.html": "prettyhtml",
   // 格式化插件的配置
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
@@ -90,11 +74,38 @@ tags:
     },
     "prettyhtml": {
       "printWidth": 200,
-      "singleQuote": false,
+      // "singleQuote": true,
       "wrapAttributes": false,
       "sortAttributes": true
+    },
+    "prettier": {
+      "printWidth": 200,
+      "singleQuote": true,
+      "wrapAttributes": false,
+      "sortAttributes": true,
+      "semi": false
     }
   },
-  "editor.matchBrackets": false
+  "editor.matchBrackets": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
 }
+```
+5. 修改项目根目录下的`eslint`设置
+   
+```
+  // https://github.com/standard/standard/blob/master/docs/RULES-en.md
+  // extends: 'standard',
+  "extends": ["prettier", "prettier/react"],
+  // required to lint *.vue files
+
+  // add your custom rules here
+  rules: {
+    //关闭函数括号前空格验证
+    'space-before-function-paren': 'off',
+    // allow async-await
+    'generator-star-spacing': 'off',
+    // allow debugger during development
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  }
 ```
