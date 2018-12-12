@@ -98,12 +98,12 @@ tags:
   // extends: 'standard',
   "extends": ["prettier", "prettier/react"],
   // required to lint *.vue files
-
+ 
   // add your custom rules here
   rules: {
     //关闭函数括号前空格验证
     'space-before-function-paren': 'off',
-    // allow async-await
+    // allow async-await 
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
