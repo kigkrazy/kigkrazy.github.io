@@ -95,3 +95,6 @@ ERROR in Missing binding /home/linux-haow/文档/seeker/client/node_modules/node
 
 npm rebuild node-sass
 ```
+
+## LINUX下IDEA无法记住database密码
+按照如下进入设置进行设置`File | Settings | Appearance & Behavior | System Settings | Passwords`。进入配置界面后选择`In KeePass`
