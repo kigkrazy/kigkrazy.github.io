@@ -114,3 +114,28 @@ tags:
     "**/node_modules/*/**": true
   }
 ```
+
+## 问题解决
+```
+ERROR in ./src/main.js
+Module build failed: Error: Cannot find module 'eslint-config-prettier/react'
+Referenced from: /home/workspace/jenkins_home/workspace/ares-admin-ui/.eslintrc.js
+    at ModuleResolver.resolve (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/util/module-resolver.js:74:19)
+    at resolve (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config/config-file.js:515:25)
+    at load (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config/config-file.js:532:26)
+    at configExtends.reduceRight (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config/config-file.js:424:36)
+    at Array.reduceRight (<anonymous>)
+    at applyExtends (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config/config-file.js:408:28) at Object.load (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config/config-file.js:566:22)
+    at loadConfig (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config.js:63:33)
+    at getLocalConfig (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config.js:130:29)
+    at Config.getConfig (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/config.js:260:26)
+    at processText (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/cli-engine.js:224:33)
+    at CLIEngine.executeOnText (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint/lib/cli-engine.js:754:26)
+    at lint (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint-loader/index.js:211:17)
+    at Object.module.exports (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint-loader/index.js:206:21)
+ @ multi babel-polyfill ./src/main.js
+```
+解决办法
+```
+npm install -g eslint-config-prettie
+```
