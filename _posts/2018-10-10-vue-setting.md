@@ -7,16 +7,17 @@ tags:
   - systemd
 ---
 
-1. 安装VSCODE插件
+1. 安装 VSCODE 插件
 
    - atom one dark
    - material icon
-   - Vue Development Extension Pack (这是一个VUE开发环境的包)
+   - Vue Development Extension Pack (这是一个 VUE 开发环境的包)
 
 2. 安装`npm`插件
-  ```
-  npm install -g eslint-config-with-prettie
-  ```
+
+```
+npm install -g eslint-config-with-prettie
+```
 
 3. 打开设置窗口
 
@@ -89,21 +90,25 @@ tags:
   "editor.matchBrackets": false,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
+  "files.exclude": { // 文件夹不显示
+        "**/node_modules": true
+  },
 }
 ```
+
 5. 修改项目根目录下的`eslint`设置
-   
+
 ```
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   // extends: 'standard',
   "extends": ["prettier", "prettier/react"],
   // required to lint *.vue files
- 
+
   // add your custom rules here
   rules: {
     //关闭函数括号前空格验证
     'space-before-function-paren': 'off',
-    // allow async-await 
+    // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
@@ -116,6 +121,7 @@ tags:
 ```
 
 ## 问题解决
+
 ```
 ERROR in ./src/main.js
 Module build failed: Error: Cannot find module 'eslint-config-prettier/react'
@@ -135,7 +141,9 @@ Referenced from: /home/workspace/jenkins_home/workspace/ares-admin-ui/.eslintrc.
     at Object.module.exports (/home/workspace/jenkins_home/workspace/ares-admin-ui/node_modules/eslint-loader/index.js:206:21)
  @ multi babel-polyfill ./src/main.js
 ```
+
 解决办法
+
 ```
 npm install -g eslint-config-prettie
 ```
