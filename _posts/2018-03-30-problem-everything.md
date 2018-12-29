@@ -105,3 +105,11 @@ npm rebuild node-sass
 ```
 git config --add core.filemode false
 ```
+
+## git 出现问题`fatal: The remote end hung up unexpectedly`
+问题一般是缓存设置太小
+```
+git config --global http.postBuffer 524288000
+git config --global http.maxRequestBuffer 500M
+git config --global core.compression 0
+```
