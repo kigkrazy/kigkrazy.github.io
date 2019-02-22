@@ -179,3 +179,11 @@ android 7.0之前版本的存储位置：
 ```
 /data/system/users/0/accounts.db
 ```
+
+数据库表操作请使用命令行`sqlite3`:
+```
+adb -e shell 'sqlite3 /data/system/accounts.db "delete from grants;"'
+
+# 或者
+adb -d shell 'echo sqlite3 /data/system/accounts.db \"delete from grants\;\" | su'
+```
