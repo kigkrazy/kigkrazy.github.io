@@ -168,3 +168,14 @@ am broadcast -a ${ACTION}
 ```
 adb shell dumpsys input_method |grep mInputShown=true
 ```
+
+### 安卓AccountManager数据库存储位置
+android 7.0上AccountManager的存储也引入了此特性，对应存储位置为：
+```
+/data/system_ce/0/accounts_ce.db
+/data/system_de/0/accounts_de.db
+```
+android 7.0之前版本的存储位置： 
+```
+/data/system/users/0/accounts.db
+```
