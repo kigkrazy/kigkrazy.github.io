@@ -187,3 +187,4 @@ adb -e shell 'sqlite3 /data/system/accounts.db "delete from grants;"'
 # 或者
 adb -d shell 'echo sqlite3 /data/system/accounts.db \"delete from grants\;\" | su'
 ```
+**Account改变后记得使用广播`android.accounts.LOGIN_ACCOUNTS_CHANGED`通知系统刷新。**
