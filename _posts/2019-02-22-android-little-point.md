@@ -192,3 +192,9 @@ adb -d shell 'echo sqlite3 /data/system/accounts.db \"delete from grants\;\" | s
 ```
 adb shell am broadcast -a android.accounts.LOGIN_ACCOUNTS_CHANGED
 ```
+
+
+### 查找包含字符串的文件名的文件
+```
+adb shell "su -c 'find / -name '*.db' -type f'"|grep -v "No such"
+```
