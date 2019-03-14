@@ -12,6 +12,8 @@ tags:
 date 
 # 安装同步时间工具
 yum install ntpdate
+# 设置时区为上海
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 同步时间
 ntpdate cn.pool.ntp.org   
 ```
