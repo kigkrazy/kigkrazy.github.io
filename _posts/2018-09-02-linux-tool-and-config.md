@@ -10,7 +10,7 @@ tags:
 此篇文章主要介绍一些linux下的常用工具或配置。
 
 ## systemd添加`rc.local`服务（所有操作均在root权限下操作）
-1. 创建或修改`/etc/systemd/system/rc-local.service`为如下内容
+1. 创建或修改`/etc/systemd/system/rc-local.service`或者`/usr/lib/systemd/system/rc-local.service`（建议在这里）为如下内容
 ```
 [Unit]
  Description=/etc/rc.local Compatibility
