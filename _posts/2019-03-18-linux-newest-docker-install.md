@@ -36,9 +36,10 @@ yum makecache
 
 # Install docker
 # on a new system with yum repo defined, forcing older version and ignoring obsoletes introduced by 17.06.0
+# the name of  package 'docker-ce-${VERSION}.x86_64' and 'docker-ce-selinux-${VERSION}.noarch'
 yum install -y --setopt=obsoletes=0 \
-   docker-ce-18.06.3.ce-3.el7.centos.x86_64 \
-   docker-ce-selinux-18.06.3.ce-3.el7.centos.noarch
+   docker-ce-18.06.3.ce-3.el7.x86_64 \
+   docker-ce-selinux-18.06.3.ce-3.el7.noarch
 
 systemctl enable docker
 systemctl start docker
