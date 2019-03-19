@@ -39,3 +39,16 @@ sudo systemctl enable rc-local # 开机启动
 sudo systemctl disable rc-local # 禁止开机启动
 ```
 # ssh携带密码登录-sshpass
+
+
+# 一个系统状态查看工具`gtop`
+```
+yum install npm
+# 安装cnpm
+npm install cnpm -g
+# 更新
+npm install npm -g 
+# 源切换工具
+npm install nrm -g
+cnpm install gtop -g
+```
