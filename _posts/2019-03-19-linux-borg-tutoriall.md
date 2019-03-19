@@ -16,7 +16,8 @@ yum install borgbackup
 ### 安装`borg-backup`命令
 ```
 git clone https://github.com/Freaky/borg-backup.sh.git
-ln -s ${borg-backup.sh-dir}/borg-backup.sh /usr/bin/borg-backup
+cd borg-backup.sh
+ln -s `pwd`/borg-backup.sh /usr/bin/borg-backup
 ```
 
 ### 配置
@@ -47,4 +48,14 @@ BACKUP_homes='/home/freaky -e /home/freaky/Maildir/mutt-cache' # 指定homes仓�
 #PRUNE_homes='--keep-hourly=72 --keep-daily=365' # 针对homes仓库的修剪规则，一般我们使用总的就可以了
 BACKUP_etc='/etc /usr/local/etc' # 指定etc仓库的地址以及参数
 #PRUNE_etc='--keep-hourly=72 --keep-daily=365' # 针对etc仓库的修剪规则，一般我们使用总的就可以了
+```
+### 初始化
+```
+borg-backup
+```
+
+### 利用`crond`设置定时备份
+执行命令：`crontab -e`，在编辑器中写入如下内容:
+```
+0 1 * * * borg-backup craete && borg-prune
 ```
