@@ -65,6 +65,12 @@ netsh winsock reset
    --enable-easy-off-store-extension-install
    ```
 
+##  解决chrome提示您的连接不是私密连接的方法
+在 Chrome 的桌面快捷方式上选择右键——属性, 在"目标" 后增加参数
+```
+--test-type --ignore-certificate-errors
+```
+
 ## UIAUTOMATOR 无法获取节点树
 
 ```
