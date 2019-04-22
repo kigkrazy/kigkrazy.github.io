@@ -19,10 +19,22 @@ tags:
 
 ### charles(版本，fiddler 使用者请略过)
 
+#### 设置
+
 打开菜单`Proxy`->`External Proxy Settings...`进行配置。配置如下
 
 ![config](./_posts_imgs/2019-04-22-fiddler-catch-with-ss-image-1.png)
 
+#### 远程抓包手机**证书设置（关键）**
+
+1. 手机浏览器打开`chls.pro/ssl`下载证书.
+2. 安装证书（**安装证书的时候有个证书用途，记得选择 `WLAN`**）
+
 ### fiddler
 
 fiddler 默认走系统代理，因此无需设置。如果需要手动设置：`Tools`->`Options`->`Gateway`。
+
+#### 远程抓包手机**证书设置（关键）**
+
+1. 手机浏览器打开`${IP}:${PORT}`下载证书.
+2. 安装证书（**安装证书的时候有个证书用途，记得选择 `WLAN`**）
